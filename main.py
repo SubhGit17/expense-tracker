@@ -30,6 +30,10 @@ def test_db():
     except Exception as e:
         return {"error": str(e)}
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.post("/register")
 def register(name: str = Form(...), password: str = Form(...)):
 
