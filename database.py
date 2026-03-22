@@ -1,6 +1,6 @@
 import os
 import mysql.connector
-from urlib.parse import urlparse
+from urllib.parse import urlparse
 
 url = urlparse(os.getenv("MYSQL_URL"))
 
