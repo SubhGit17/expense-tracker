@@ -2,14 +2,22 @@ import os
 import mysql.connector
 from urllib.parse import urlparse
 
-url = urlparse(os.getenv("MYSQL_URL"))
+conn = None
+cursor = None
 
-conn = mysql.connector.connect(
-    host=url.hostname,
-    user=url.username,
-    password=url.password,
-    database=url.path[1:],
-    port=url.port
-)
+try:
+    url = urlparse(os.getenv("MYSQL_URL"))
 
-cursor = conn.cursor(dictionary=True)
+    conn = mysql.connector.connect(
+        host=url.hostname,
+        user=url.username,
+        password=url.password,
+        database=url.path[1:],
+        port=url.port
+    )
+
+    cursor = conn.cursor(dictionary=True)
+    print("DB Connected")
+
+except Exception as e:
+    print("DB ERROR:", e)
