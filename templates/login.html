@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1 style="text-align:center; margin-top: 20px;">
+    Expense Tracker App
+</h1>
+
+<p style="text-align:center; color:gray; margin-bottom: 30px;">
+    Track your daily expenses easily and smartly
+</p>
+
+<div class="auth-container">
+
+{% if msg == "registered" %}
+<p style="color: green; text-align:center;">
+Registered successfully! Please login.
+</p>
+{% endif %}
+
+{% if msg == "invalid" %}
+<p style="color: red; text-align:center; margin-bottom: 20px;">
+Invalid username or password
+</p>
+{% endif %}
+
+<div class="auth-box">
+<h2>Login</h2>
+
+<form action="/login" method="post">
+<input type="text" name="name" placeholder="Username" required>
+<br><br>
+
+<input type="password" name="password" placeholder="Password" required>
+<br><br>
+
+<button type="submit">Login</button>
+</form>
+</div>
+
+<div class="auth-box">
+<h2>Register</h2>
+
+<form action="/register" method="post">
+<input type="text" name="name" placeholder="New Username" required>
+<br><br>
+
+<input type="password" name="password" placeholder="NewPassword" required>
+<br><br>
+
+<button type="submit">Register</button>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

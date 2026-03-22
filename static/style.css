@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin:auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    text-align:center;
+}
+
+form {
+    background:white;
+    padding: 20px;
+    width: 300px;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+tr:hover {
+    background-color:#f1f1f1;
+}
+
+.chart-container {
+    width: 600px;
+    height: 350px;
+    margin: 40px auto;
+}
+
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2c3e50;
+    color:white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    background:red;
+}
+
+.edit-btn {
+    padding: 5px 10px;
+    background:#3498db;
+    color:white;
+    border-radius: 5px;
+    text-decoration:none;
+}
+
+a[href*="delete"] {
+    color: red;
+    font-weight: bold;
+}
+
+a {
+    text-decoration:none;
+}
+
+.auth-conatiner {
+    max-width: 400px;
+    margin: 60px auto;
+}
+
+.auth-box {
+    background:white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.auth-box button {
+    width: 100%;
+}
+
+body.dark {
+    background-color:#1e1e2f;
+    color:#ffffff;
+}
+
+body.dark .navbar {
+    background: #111827;
+}
+
+body.dark form,
+body.dark .auth-box,
+body.dark table,
+body.dark .chart-container {
+    background:#2c2c3a;
+    color:white;
+}
+
+body.dark input {
+    background:#3a3a4d;
+    color:white;
+    border: 1px solid #555;
+}
+
+body.dark table th,
+body.dark table td {
+    border-color: #555;
+}
+
+body.dark a {
+    color:#4ea8ff;
+}
+
+body.dark table tr:hover {
+    background-color:#3a3a4d;
+}
+
+body.dark table tr {
+    transition:background 0.2s ease;
+}
+
+body.dark table tr:nth-child(even) {
+    background-color:#2a2a3a;
+}
+
+body.dark atble tr:nth-child(odd) {
+    background-color:#242433;
+}
+
+button.download-btn {
+    background-color:#007bff;
+}
+
+button.download-btn:hover {
+    background-color:#0056b3;
+}
